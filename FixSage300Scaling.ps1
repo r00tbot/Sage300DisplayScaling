@@ -15,7 +15,7 @@ if (-Not (Get-ItemProperty -Path $regPath -Name $modulePaths[0] -ErrorAction Sil
 # Get current DPI scaling setting
 $currentSetting = Get-ItemProperty -Path $regPath -Name $modulePaths[0] | Select-Object -ExpandProperty $modulePaths[0]
 
-# Toggle scaling setting on and off
+# Toggle scaling setting
 if ($currentSetting -eq "~ HIGHDPIAWARE") {$newSetting = ""} else {$newSetting = "~ HIGHDPIAWARE"}
 
 # Apply scaling setting to every executable
