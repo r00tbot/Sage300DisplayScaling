@@ -1,5 +1,5 @@
 # Get executables in Sage local install folder
-$modulePaths = Get-ChildItem "C:\Program Files (x86)\Timberline Office\Shared\" -Filter *.exe | Select-Object -ExpandProperty Name
+$modulePaths = Get-ChildItem "C:\Program Files (x86)\Timberline Office\Shared\" -Filter *.exe | Select-Object -ExpandProperty FullName
 
 # Scaling registry key for all users
 $regPath = "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
